@@ -1,0 +1,307 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notube - Convertisseur YouTube en MP3/MP4 Gratuit</title>
+    <meta name="description" content="Notube permet de télécharger des vidéos YouTube en MP3, MP4, 3GP rapidement et gratuitement, sans inscription ni installation.">
+    <meta name="keywords" content="Notube, télécharger vidéos YouTube, MP3, MP4, 3GP, outil de conversion, téléchargement rapide, YouTube en ligne">
+    <meta name="robots" content="index, follow">
+    <link rel="shortcut icon" href="./index_files/favicon.png" type="image/x-icon">
+    <meta property="og:image" content="/index_files/notube.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
+    <meta name="msvalidate.01" content="B4E6B02DB1F3701AF2DCC071BDD9170D" />
+    <style>
+        body {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-image: linear-gradient(to top, rgb(43 105 183, 1) 0%, rgb(31 76 132 / 65%) 50%);
+        color: #333;
+        background-color: #0b122a;
+    }
+
+    header {
+        text-align: center;
+        padding: 15px;
+    }
+
+    article {
+        max-width: 800px;
+        margin: auto;
+        padding: 0 15px;
+        color: #fff;
+    }
+
+    article img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    h1 {
+        text-align: center;
+        text-transform: uppercase;
+        text-shadow: 1px 2px #000;
+    }
+
+    footer {
+        background: linear-gradient(180deg, rgb(0 0 0 / 18%) 0%, rgba(0, 0, 0, 0) 100%);
+        border-top: solid 2px rgb(23, 89, 104);
+        text-align: center;
+        color: #fff;
+        padding: 15px;
+        font-size: small;
+    }
+
+    strong {
+        color: #b955fd;
+    }
+
+    a {
+        color: #007aff;
+    }
+
+    .slogan {
+        text-align: center;
+    }
+
+    .buttons {
+        margin: 10%;
+        text-align: center;
+    }
+
+    .btn-hover {
+        width: 300px;
+        font-size: 16px;
+        font-weight: 600;
+        color: #fff;
+        cursor: pointer;
+        height: 55px;
+        text-align: center;
+        border: none;
+        background-size: 300% 100%;
+
+        border-radius: 50px;
+        moz-transition: all .4s ease-in-out;
+        -o-transition: all .4s ease-in-out;
+        -webkit-transition: all .4s ease-in-out;
+        transition: all .4s ease-in-out;
+    }
+
+    .btn-hover:hover {
+        background-position: 100% 0;
+        moz-transition: all .4s ease-in-out;
+        -o-transition: all .4s ease-in-out;
+        -webkit-transition: all .4s ease-in-out;
+        transition: all .4s ease-in-out;
+    }
+
+    .btn-hover:focus {
+        outline: none;
+    }
+
+    .btn-hover.color-9 {
+        background-image: linear-gradient(to right, #007aff, #007aff, #007aff, #007aff);
+        box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 35px auto;
+    }
+    .convert-form {
+    max-width: 800px;
+    margin: 10px auto 20px;
+}
+
+.page-title-search {
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -o-border-radius: 3px;
+    position: relative;
+    display: flex;
+    margin: 35px 0 25px;
+    background: #202125;
+}
+
+.page-title-search:before {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    width: 14px;
+    height: 14px;
+    margin-top: -7px;
+    display: block;
+    content: "";
+    background: url("./search.png") no-repeat center
+}
+
+.page-title-search input[type=search],
+.page-title-search input[type=text] {
+    color: #ededed;
+    font-family: Poppins, sans-serif;
+    border-radius: 0;
+    width: 65%;
+    border: none;
+    padding: 8px 0 8px 55px;
+    font-size: 16px;
+    font-weight: 300;
+    background: #242625;
+}
+
+.page-title-search input[type=search]:focus {
+    outline: none;
+}
+
+.page-title-search #selectedFormat.dropbtn {
+    border-radius: 0;
+    background-color: #1f74ad;
+    color: #fff;
+    width: 16%;
+    padding: 14px 16px 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 52px
+}
+
+.page-title-search input[type=submit] {
+    width: 20%;
+    background: #c00;
+    border: none;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(98, 98, 98, .1);
+    -moz-box-shadow: 0 2px 8px rgba(98, 98, 98, .1);
+    -ms-box-shadow: 0 2px 8px rgba(98, 98, 98, .1);
+    -webkit-box-shadow: 0 2px 8px rgba(98, 98, 98, .1);
+    -o-box-shadow: 0 2px 8px rgba(98, 98, 98, .1)
+}
+
+.page-title-search input[type=submit]:hover {
+    background: #900
+}
+
+.page-title-search #selectedFormat.dropbtn:focus {
+    outline: none;
+}
+
+#form1 select {
+    background: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2232%22%20height%3D%2232%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M12%2017.414%203.293%208.707l1.414-1.414L12%2014.586l7.293-7.293%201.414%201.414L12%2017.414z%22%20fill%3D%22white%22/%3E%3C/svg%3E) right 15px center/16px 16px no-repeat;
+    color: #fff
+}
+
+@media screen and (min-width:767px) {
+    .page-title-search input[type=submit] {
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .page-title-search {
+        flex-wrap: wrap
+    }
+
+    .page-title-search:before {
+        top: 26px
+    }
+
+    .page-title-search input[type=search] {
+        width: 100%;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        line-height: 1.5;
+    }
+
+    .page-title-search #selectedFormat.dropbtn,
+    .page-title-search input[type=submit] {
+        width: 50%
+    }
+}
+
+@media screen and (max-width:480px) {
+    .page-title-search:before {
+        left: 15px
+    }
+}
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="./index_files/logo.png" alt=" logo" width="300">
+    </header>
+    <article>
+        <h1>noTube - Convertisseur YouTube en MP3/MP4 Gratuit</h1>
+        <div class="btn-hover color-9" onclick="window.open('https://notube.art/fr', '_blank')">Accéder à la page d'accueil</div>
+        <p>Dans un monde où le streaming domine notre consommation multimédia, disposer d'outils pour télécharger et convertir des vidéos devient essentiel pour un accès hors ligne. <strong>Notube</strong>, un convertisseur en ligne, se positionne comme une solution gratuite et pratique pour répondre à ces besoins. Voici tout ce que vous devez savoir sur cette plateforme.</p>
+        <div class="convert-form">
+            <form id="form1" class="page-title-search" action="https://notube.art/fr" method="get"><input id="input" name="video" type="search" placeholder="Url, mots clés..." data-enpassusermodified="yes" required><br>
+                <select id="selectedFormat" class="dropbtn" name="formats" aria-label="format-menu">
+                    <option value="mp3">MP3</option>
+                    <option value="mp4">MP4</option>
+                </select><br>
+                <input id="submit-button" type="submit" value="Convert"></form>
+        </div>
+        <p style="text-align:center"><img src="./index_files/notube.jpg" width="800" height="457" alt="Notube"></p>
+        <h2>Qu'est-ce que Notube ?</h2>
+        <p>Notube est une plateforme en ligne permettant de convertir des vidéos YouTube (et d'autres plateformes) en formats audio et vidéo tels que MP3, MP4, M4A, et bien d'autres. Elle est entièrement gratuite, accessible sans inscription, et compatible avec plusieurs appareils et systèmes d'exploitation comme Windows, Android et iOS.</p>
+        <h3>Caractéristiques principales :</h3>
+        <ul>
+            <li><strong>Formats pris en charge</strong> : MP3 (HD), MP4 (HD, 2K), M4A, FLV, 3GP.</li>
+            <li><strong>Compatibilité</strong> : Multi-plateforme (ordinateurs, smartphones, tablettes).</li>
+            <li><strong>Langues disponibles</strong> : 16 langues, idéal pour une audience internationale.</li>
+            <li><strong>Mode de téléchargement</strong> : Direct, sans application tierce</li>
+        </ul>
+        <h2>Pourquoi utiliser Notube ?</h2>
+        <h3>Les avantages :</h3>
+        <ol>
+            <li><strong>Gratuit et illimité</strong> : Contrairement à certains concurrents, Notube permet un nombre illimité de téléchargements sans frais cachés.</li>
+            <li><strong>Facilité d’utilisation</strong> : Une interface intuitive et rapide, même pour les novices.</li>
+            <li><strong>Support multi-plateformes</strong> : Compatible avec 22 sites de streaming, y compris TikTok, Facebook et Vimeo.</li>
+            <li><strong>Formats variés</strong> : Une flexibilité qui s’adapte aux besoins spécifiques des utilisateurs​</li>
+        </ol>
+        <h3>Les limites :</h3>
+        <ul>
+            <li><strong>Présence de publicités</strong> : L’utilisation peut être perturbée par des fenêtres publicitaires, bien qu’un bloqueur de pub puisse résoudre ce problème.</li>
+            <li><strong>Légalité à surveiller</strong> : En France, comme dans d'autres pays, le téléchargement de contenu protégé par le droit d’auteur peut poser problème</li>
+        </ul>
+        <h2>Aspect légal : Ce que vous devez savoir</h2>
+        <p>En France, le droit autorise la copie privée d’une œuvre uniquement si l'utilisateur en possède déjà une version légale. Cela signifie que télécharger une vidéo ou une chanson protégée depuis YouTube via Notube est illégal sans autorisation explicite. Pour contourner les restrictions géographiques ou protéger vos données, il est possible d’utiliser un VPN, bien que cela ne rende pas le téléchargement légal.</p>
+        <h2>Comparaison avec les concurrents</h2>
+        <p>Face à des outils comme 4K Video Downloader ou ClipGrab, Notube se distingue par sa gratuité totale et sa simplicité. Cependant, ces avantages sont contrebalancés par la publicité, absente chez certains concurrents payants. Notube pourrait également améliorer sa communication sur la légalité de son utilisation pour renforcer la confiance des utilisateurs.</p>
+        <h3>Points à améliorer :</h3>
+        <ul>
+            <li>Une version premium sans publicité.</li>
+            <li>Une meilleure gestion des aspects légaux.</li>
+            <li>Une prise en charge des vidéos 4K native pour répondre aux tendances émergentes.</li>
+        </ul>
+        <h2>Conseils pour une utilisation optimale</h2>
+        <ol>
+            <li>Installer un bloqueur de publicités : Pour éviter les interruptions lors de la navigation.</li>
+            <li>Utiliser un VPN : Afin de protéger vos données personnelles et contourner les restrictions locales.</li>
+            <li>Télécharger du contenu libre de droits : Respecter les droits des créateurs en utilisant des vidéos sous licence Creative Commons.</li>
+        </ol>
+        <h2>Tendances futures et perspectives</h2>
+        <p>Avec la montée en puissance des contenus 4K et immersifs, Notube pourrait se développer pour inclure ces formats. En outre, l'évolution des régulations autour du streaming pourrait influencer la manière dont ces outils fonctionnent. Adapter son offre en fonction des lois locales et des attentes des utilisateurs sera essentiel</p>
+        <h2>Conclusion</h2>
+        <p><strong>Notube</strong> est un outil indispensable pour ceux qui cherchent une solution gratuite et pratique pour convertir et télécharger des vidéos en ligne. Si ses fonctionnalités et sa simplicité séduisent, il est crucial de l’utiliser de manière responsable en respectant les droits d’auteur.</p>
+        <p>Explorez Notube dès aujourd’hui, mais n’oubliez pas de privilégier une consommation numérique éthique et respectueuse des créateurs de contenu.</p>
+    </article>
+    <footer>
+        <p>Copyright © 2024 Notube</p>
+    </footer>
+</body>
+
+</html>
